@@ -62,9 +62,9 @@ void beFiltering(cv::Mat &image) {
         247, 248, 248, 249, 249, 250, 250, 251, 251, 252,
         252, 253, 254, 254, 255, 255 };
     //the three typical method is shown as follows:
-    Mat img1 = imread("/Users/wangsiwei/Desktop/毕业设计图片/美白/8.jpg");
-    Mat img2 = imread("/Users/wangsiwei/Desktop/毕业设计图片/美白/82.jpg");
-    Mat img3 = imread("/Users/wangsiwei/Desktop/毕业设计图片/美白/14.jpg");
+    Mat img1 = imread("8.jpg");
+    Mat img2 = imread("82.jpg");
+    Mat img3 = imread("14.jpg");
     MatND hist0[3], hist1[3], hist2[3], hist3[3];
     //Calculate image histogram
     CompImageHist(img1, hist1[0], hist1[1], hist1[2]);

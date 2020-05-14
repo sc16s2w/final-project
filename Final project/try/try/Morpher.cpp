@@ -394,8 +394,8 @@ void Morpher::on_mouser(int event, int x, int y, int flag, void* param)
 
 void Morpher::main()
 {
-    first_image_name = "/Users/wangsiwei/Desktop/3.jpg";
-    second_image_name = "/Users/wangsiwei/Desktop/3.png";
+    first_image_name = "8.jpg";
+    second_image_name = "20.jpg";
     new_image_name = "morph";
 
     //设置动画的过渡帧数，比如1为50%，3为25%，50%，75%

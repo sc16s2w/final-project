@@ -455,11 +455,10 @@ int main(){
         cin>>choice_2;
         if(choice_2 == "1"){
             printf("the auto face whitening effect display\n");
+            Mat src_original = imread(image_directory);
             Mat rgb_detect;
             RGB_detect(src_original, rgb_detect);
             imshow("rgb_detect",rgb_detect);
-            printf("whether you want to save it or not\n");
-            imwrite("/Users/wangsiwei/Desktop/毕业设计图片/美白/result.jpg",rgb_detect);
             }
         if(choice_2 == "2"){
             printf("display of other skin detection effect\n");
@@ -495,26 +494,19 @@ int main(){
         if(choice_2 == "3"){
             printf("display of other two whitening effect\n");
             printf("the fist method is written as the linear change of brightness and contractness:\n");
-            printf("now, you should input the alpha(1-2)\n");
-            int alpha;
-            int beta;
-            cin>>alpha;
-            printf("now, you should input the beta(20-50)\n");
-            cin>>beta;
+            printf("the alpha value is between (1-2)\n");
+            printf("the beta value is between (20-50)\n");
             src = imread(image_directory);
             if (!src.data){
                 cout << "NO DATA" << endl;
             }
-            whiteFace(src, alpha, beta);
+            whiteFace(src, 1.3, 30);
             imshow("normal linear method", src);
             printf("the second method is written as the non-linear change of brightness and contractness:\n");
-            printf("now, you can input the gamma(0-1)\n");
-            double gamma;
-            cin>>gamma;
+            printf(" the gamma value is between(0-1)\n");
             Mat gamma_origin = imread(image_directory);
             Mat gamma_result;
-            gammaProcessImage(gamma_origin, gamma, gamma_result);
-            imshow("gamma effect",gamma_result);
+            gammaProcessImage(gamma_origin, 0.7, gamma_result);
         }
         if(choice_2 == "4"){
             printf("the auto face whitening effect display\n");

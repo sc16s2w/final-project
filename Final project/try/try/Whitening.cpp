@@ -41,7 +41,7 @@ void gammaProcessImage(Mat& oriMat,double gamma,Mat outputMat){
     Mat matSelfPhoto;
     outputMat = oriMat.clone();
     LUT(oriMat,lookupTable, outputMat);
-    imshow("gg",outputMat);
+    imshow("gamma whitening shows",outputMat);
 
 }
 /*this is the best whitening effect*/

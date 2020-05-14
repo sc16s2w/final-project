@@ -20,11 +20,11 @@
  Mat RGB_detect(Mat &src, Mat &output_mask)
  {
     //to load 5 typical whietning pictures
-     Mat img1 = imread("/Users/wangsiwei/Desktop/毕业设计图片/美白/21.jpg");
-     Mat img2 = imread("/Users/wangsiwei/Desktop/毕业设计图片/美白/22.jpg");
-     Mat img3 = imread("/Users/wangsiwei/Desktop/毕业设计图片/美白/8.jpg");
-     Mat img4 = imread("/Users/wangsiwei/Desktop/毕业设计图片/美白/13.jpg");
-     Mat img5 = imread("/Users/wangsiwei/Desktop/毕业设计图片/美白/26.jpg");
+     Mat img1 = imread("21.jpg");
+     Mat img2 = imread("22.jpg");
+     Mat img3 = imread("8.jpg");
+     Mat img4 = imread("13.jpg");
+     Mat img5 = imread("26.jpg");
      MatND hist0[3], hist1[3], hist2[3], hist3[3],hist4[3],hist5[3];
      // calculate picture histogram
      CompImageHist(img1, hist1[0], hist1[1], hist1[2]);
